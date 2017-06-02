@@ -1,0 +1,15 @@
+{
+  "name": "require-from-package",
+  "version": "1.0.0",
+  "description": "generate requires from Grunt + package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/lunhng/require-from-package.git"
+  },
+  "author": "Guilherme Lunhani <lunhg@gmail.com>",
+  "license": "ISC"
+}
