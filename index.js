@@ -19,7 +19,7 @@ module.exports = function(opt, done){
 	let _dep = opt.pkg[opt.deps[i]];
 	for(let j in _dep){
 	    let name = j.replace(/-/, "_")
-	    if(!name.match(/grunt.*/) && !name.match(/check_node/)){
+	    if(!name.match(/grunt.*/) && !name.match(/check_node/) && !name.match(/require_from_package/)){
 		str.push(`const ${name} = require('${j}')`);
 	    }
 	}
