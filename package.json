@@ -1,6 +1,6 @@
 {
   "name": "require-from-package",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "generate requires from Grunt + package.json",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,9 @@
     "url": "https://www.github.com/lunhng/require-from-package.git"
   },
   "author": "Guilherme Lunhani <lunhg@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": [
+    "grunt",
+    "injection"
+  ]
 }
