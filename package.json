@@ -1,6 +1,6 @@
 {
   "name": "require-from-package",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "generate requires from Grunt + package.json",
   "main": "index.js",
   "scripts": {
