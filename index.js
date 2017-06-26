@@ -17,10 +17,21 @@ module.exports = function(opt, done){
 	for(let j in opt.core){
 	    let __pkg__ = opt.core[j]
 	    if(opt.ext === 'js'){
-		str.push(`const ${__pkg__} = require('${__pkg__}')`);
+		if(__pkg__ !== 'jQuery' || __pkg__ !== 'jquery'){
+		    str.push(`const ${__pkg__} = require('${__pkg__}')`);
+		}
+		else{
+		    str.push("window.jQuery = require('jquery')");
+		}
 	    }
 	    else if(opt.ext === 'coffee'){
-		str.push(`${__pkg__} = require '${__pkg__}'`);
+		if(__pkg__ !== 'jQuery' || __pkg__ !== 'jquery'){
+		    str.push(`${__pkg__} = require '${__pkg__}'`);
+		}
+		else{
+		    str.push("window.jQuery = require 'jquery'");
+		}
+		
 	    }
 	    else{
 		throw new Error("no extension defined");
