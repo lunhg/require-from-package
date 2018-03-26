@@ -41,6 +41,8 @@ module.exports = function(opt, done){
 	let _dep = opt.pkg[__deps__[i]];
 	for(let j in _dep){
 	    let name = j.replace(/-/g, "_")
+	    name = j.replace(/\@/g, "")
+	    name = j.replace(/\//g, "_")
 	    if(opt.validate(name)){
 		if(opt.ext === 'js'){
 		    str.push(`const ${name} = require('${j}')`);
